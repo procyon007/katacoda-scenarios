@@ -1,1 +1,3 @@
-Welcome to your first Katacoda Scenario!
+# AWXの基本操作を独習するコースへようこそ。
+----
+ここではAWX利用し、AnsibleTowerで使用する基本操作を学習します。
