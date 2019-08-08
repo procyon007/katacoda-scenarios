@@ -9,6 +9,10 @@ git clone https://github.com/ansible/awx.git
 #インストーラディレクトリへ移動
 cd $HOME/awx/installer
 
+#ansible インストール
+sudo apt-get update
+sudo apt-get install -y ansible
+
 #AWXをインストール
 sudo ansible-playbook -i inventory install.yml
 
