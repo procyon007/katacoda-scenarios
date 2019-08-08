@@ -11,7 +11,7 @@ cd $HOME/awx/installer
 
 #ansible インストール
 sudo apt-get update
-sudo apt-get install -y ansible
+sudo pip install ansible
 
 #AWXをインストール
 sudo ansible-playbook -i inventory install.yml
