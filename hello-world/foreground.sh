@@ -1,5 +1,5 @@
 #!/bin/bash
-#echo "Start job"
+echo "Start job"
 #rootディレクトへ移動
 cd $HOME
 
