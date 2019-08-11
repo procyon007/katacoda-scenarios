@@ -25,6 +25,7 @@ cd $HOME/awx/installer
 sudo pip3 install setuptools
 sudo pip3 install ansible
 sudo pip2.7 docker
+sudo pip2.7 docker-compose
 sudo pip2.7 requests
 
 #AWXをインストール
