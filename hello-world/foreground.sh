@@ -10,7 +10,7 @@ git clone https://github.com/ansible/awx.git
 cd $HOME/awx/installer
 
 #Docker インストール
-sudo apt-get -y remove docker.io 
+#sudo apt-get -y remove docker.io 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 cd /usr/lib/python3/dist-packages
 sudo ln -s apt_pkg.cpython-{35m,37m}-x86_64-linux-gnu.so
