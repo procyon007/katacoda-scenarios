@@ -4,10 +4,56 @@
   "difficulty": "beginner",
   "time": "2 minutes",
   "details": {
-    "steps": [{
-      "title": "Step 1 - Run Command",
+    "steps": [
+      {
+      "title": "Step 1 - AWX・AnsibleTowerの概要",
       "text": "step1.md"
-    }],
+    },
+    {
+      "title": "Step 2 - 利用する際の主なフロー",
+      "text": "step1.md"
+    }, 
+    {
+      "title": "Step 3 - 本コースで使用する環境について",
+      "text": "step1.md"
+    }, 
+    {
+      "title": "Step 4 - 組織の登録",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 5 - 認証情報の登録",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 6 - ユーザの作成",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 7 - 認証情報の作成",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 8 - インベントリの作成",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 9 - プロジェクトの作成",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 10 - ジョブテンプレートの作成",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 11 - ジョブの実行（手動実行）",
+      "text": "step1.md"
+    },
+    {
+      "title": "Step 12 - ジョブの実行（スケジュール）",
+      "text": "step1.md"
+    }
+  ],
     "intro": {
       "text": "intro.md",
       "code": "foreground.sh",
