@@ -24,9 +24,9 @@ cd $HOME/awx/installer
 #必要モジュールを インストール
 sudo pip3 install setuptools
 sudo pip3 install ansible
-sudo pip2.7 docker
-sudo pip2.7 docker-compose
-sudo pip2.7 requests
+sudo pip2.7 install docker
+sudo pip2.7 install docker-compose
+sudo pip2.7 install requests
 
 #AWXをインストール
 sed -i s/"#project_data_dir"/project_data_dir/g inventory
