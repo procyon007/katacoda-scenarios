@@ -6,7 +6,7 @@ cd $HOME
 #AWX公式githubから最新版を取得
 git clone https://github.com/ansible/awx.git
 
-#インストーラディレクトリへ移動
+#インストーラのディレクトリへ移動
 cd $HOME/awx/installer
 
 #Docker インストール
@@ -21,11 +21,14 @@ cd $HOME/awx/installer
 #sudo apt-get update
 #sudo apt-get install -y docker-ce
 
-#ansible インストール
+#必要モジュールを インストール
 sudo pip3 install setuptools
 sudo pip3 install ansible
+sudo pip2.7 docker
+sudo pip2.7 requests
 
 #AWXをインストール
+sed -i s/"#project_data_dir"/project_data_dir/g inventory
 sudo ansible-playbook -i inventory install.yml
 
 #　インストール完了を表示
