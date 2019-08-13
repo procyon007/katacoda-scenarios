@@ -62,7 +62,7 @@
     }
   },
   "environment": {
-    "hideintro": true,
+    "hideintro": false,
     "showdashboard": true,
     "dashboards": [{"name": "Port 80", "port": 80}],
     "uilayout": "terminal",
