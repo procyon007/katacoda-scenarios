@@ -6,12 +6,12 @@
   "details": {
     "steps": [
       {
-      "title": "Step 1 - AWX・AnsibleTowerの概要",
+      "title": "Step 1 - AnsibleTower / AWXの概要",
       "text": "step1.md"
     },
     {
-      "title": "Step 2 - 利用する際の主なフロー",
-      "text": "step1.md"
+      "title": "Step 2 - AnsibleTowerの構造について",
+      "text": "step2.md"
     }, 
     {
       "title": "Step 3 - 本コースで使用する環境について",
