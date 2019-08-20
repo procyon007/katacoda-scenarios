@@ -21,7 +21,7 @@
     "uilayout": "terminal-iframe"
   },
   "backend": {
-    "imageid": "centos",
+    "imageid": "docker",
     "port": "80"
   }
 }
