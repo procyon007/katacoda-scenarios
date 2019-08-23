@@ -12,4 +12,7 @@ Ansible Tower/AWXは、以下図のようにOrganization(組織)に、ユーザ�
 | Oranaization | ユーザ、チーム、プロジェクト及びインベントリーの論理コレクション |
 | Inventories | ジョブの実行対象となるホスト |
 | Teams | Oranaizationに関連付けられた、ユーザ・プロジェクト・認証情報のコレクション |
-| Projects | Oranaizationに関連付けられた、ユーザ・プロジェクト・認証情報のコレクション |
+| Projects | Oranaizationに関連付けられたPlaybookのコレクション |
+| Groups | Oranaizationに関連付けられた、ホストをグルーピングしたもの<br>Ansible CoreのGroup変数 |
+| Hosts | Ansible Tower/AWXで管理される機器<br>Ansible CoreのHost変数 |
+| Credentials | Hostsに登録した機器へ接続する際に使用する認証情報 |
