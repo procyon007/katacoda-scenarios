@@ -1,11 +1,12 @@
 # AWXの基本操作を独習するコースへようこそ。
 ----
-ここではAWX利用し、AnsibleTowerで使用する基本操作を学習します。  
+本コースでは、AnsibleTowerの無償版であるAWXを使用し  
+基本的な操作方法を学習致します。
   
 以下について学習します。  
-
-- AWX・AnsibleTowerの概要  
-- 利用する際の主なフロー
+  
+- AnsibleTower/AWXの概要  
+- AnsibleTower/AWXの構造
 - 本コースで使用する環境について
 - 組織の登録
 - 認証情報の登録
