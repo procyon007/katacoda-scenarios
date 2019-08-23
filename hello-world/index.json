@@ -10,7 +10,7 @@
       "text": "step1.md"
     },
     {
-      "title": "Step 2 - AnsibleTowerの構造について",
+      "title": "Step 2 - AnsibleTower/ AWXの構造について",
       "text": "step2.md"
     }, 
     {
@@ -65,9 +65,9 @@
   "environment": {
     "hideintro": false,
     "showdashboard": true,
-    "dashboards": [{"name": "Port 80", "port": 80}],
+    "dashboards": [{"name": "AWX Web", "port": 80}],
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Ubuntu.\r\nStart AWX Setup \u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Interactive Ubuntu.\r\n \u001b[m\r\n"
   },
   "backend": {
     "imageid": "ubuntu"
