@@ -24,5 +24,3 @@ Ansible TowerではWebインターフェースと、Ansible単体で不足して
 AWXはAnsible TowerのOSS版ですが、CentOSとは異なりアップストリーム（開発版）と位置されております。  
 その為、商用（本番環境）での利用は控え、Ansible Tower導入前の動作確認などで使用されております。  
 本コースでは、AWS（Docker版）を使用いたします。
-
-## AnsibleTower/AWX で登場する用語
