@@ -22,12 +22,7 @@ sudo pip2.7 install requests
 sed -i s/"#project_data_dir"/project_data_dir/g inventory
 sudo ansible-playbook -i inventory install.yml
 
-#　インストール完了を表示
-echo "AWX Install Complete"
-
-
-
 for i in {1..2}
 do
-  docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE /sbin/init &
+  sudo docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE /sbin/init &
 done

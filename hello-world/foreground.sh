@@ -29,5 +29,5 @@ echo "AWX Install Complete"
 
 for i in {1..2}
 do
-  docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE /sbin/init &
+  sudo docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE /sbin/init &
 done
