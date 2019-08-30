@@ -55,7 +55,8 @@
     }
   ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "foreground.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -69,7 +70,6 @@
     "uimessage1": "\u001b[32mYour Interactive Ubuntu.\r\n \u001b[m\r\n"
   },
   "backend": {
-    "imageid": "ubuntu",
-    "code": "foreground.sh"
+    "imageid": "ubuntu"
   }
 }
