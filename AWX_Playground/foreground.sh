@@ -22,7 +22,10 @@ sudo pip2.7 install requests
 sed -i s/"#project_data_dir"/project_data_dir/g inventory
 sudo ansible-playbook -i inventory install.yml
 
-for i in {1..2}
-do
-  sudo docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE
-done
+sudo docker run --net=awxcompose_default --rm=true --name=host1 $DOCKER_IMAGE
+sudo docker run --net=awxcompose_default --rm=true --name=host2 $DOCKER_IMAGE
+
+#for i in {1..2}
+#do
+#  sudo docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE
+#done
