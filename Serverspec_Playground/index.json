@@ -21,6 +21,6 @@
     "uilayout": "terminal-iframe"
   },
   "backend": {
-    "imageid": "ansible"
+    "imageid": "docker"
   }
 }
