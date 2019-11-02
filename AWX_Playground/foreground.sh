@@ -28,5 +28,5 @@ sudo ansible-playbook -i inventory install.yml > /dev/null 2>&1
 
 for i in {1..2}
 do
- sudo docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE > /dev/null 2>&1
+sudo docker run --net=awxcompose_default --rm=true --name=host$i $DOCKER_IMAGE > /dev/null 2>&1
 done
