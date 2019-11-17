@@ -8,7 +8,7 @@ ruby_ver="2.6.5"
 
 # 必要なパッケージ、Ansibleをインストール
 yum -y update
-yum -y install epel-release
+yum -y install epel-release jq
 yum -y install git make autoconf curl wget
 yum -y install gcc-c++ glibc-headers openssl-devel readline libyaml-devel readline-devel zlib zlib-devel sqlite-devel bzip2
 yum -y install openssh-clients python ansible
@@ -34,8 +34,8 @@ docker network create sp_play
 
 for i in 1 2
 do
-    docker run -d --net=sp_play --rm=true --name=host$i $DOCKER_IMAGE /sbin/init
+    docker run -d --security-opt label:disable --net=sp_play --rm=true --name=host$i $DOCKER_IMAGE /sbin/init
     sleep 10
-    IPADDR=`docker inspect node-${i}  | jq -r ".[0].NetworkSettings.IPAddress"`
+    IPADDR=`docker inspect host${i}  | jq -r ".[0].NetworkSettings.IPAddress"`
     echo node-${i} ansible_ssh_host=${IPADDR:?} ansible_ssh_user=ansible ansible_ssh_pass=password123 >> inventory
 done
