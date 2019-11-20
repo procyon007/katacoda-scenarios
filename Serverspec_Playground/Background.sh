@@ -36,6 +36,6 @@ for i in 1 2
 do
     docker run -d --security-opt label:disable --net=sp_play --rm=true --name=host$i $DOCKER_IMAGE /sbin/init
     sleep 10
-    IPADDR=`docker inspect host${i}  | jq -r ".[0].NetworkSettings.IPAddress"`
+    IPADDR=`docker inspect host$i  | jq -r ".[0].NetworkSettings.IPAddress"`
     echo node-${i} ansible_ssh_host=${IPADDR:?} ansible_ssh_user=ansible ansible_ssh_pass=password123 >> inventory
 done
