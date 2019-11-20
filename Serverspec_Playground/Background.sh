@@ -6,6 +6,9 @@ DOCKER_IMAGE="procyon07/kata_image"
 # rubyとrailsのバージョンを指定
 ruby_ver="2.6.5"
 
+#Docker用Network名
+dk_net="sp_play"
+
 # 必要なパッケージ、Ansibleをインストール
 yum -y update
 yum -y install epel-release jq
@@ -30,13 +33,12 @@ source /etc/profile.d/rbenv.sh; rbenv install ${ruby_ver}; rbenv global ${ruby_v
 source /etc/profile.d/rbenv.sh; gem install serverspec rake highline
 
 #Docker用ネットワーク作成
-docker network create sp_play
+docker network create $dk_net
 
 for i in 1 2
 do
-    docker run -d --security-opt label:disable --net=sp_play --rm=true --name=host$i $DOCKER_IMAGE /sbin/init
+    docker run -d --security-opt label:disable --net=$dk_net --rm=true --name=host$i $DOCKER_IMAGE /sbin/init
     sleep 10
-    IPADDR= docker inspect -format="{{ .NetworkSettings.IPAddress }}" host$i
-    #IPADDR=`docker inspect host$i  | jq -r ".[0].NetworkSettings.IPAddress"`
+    IPADDR=`docker inspect host$i  | jq -r ".[0].NetworkSettings.Networks.$dk_net.IPAddress"`
     echo host$i ansible_ssh_host=${IPADDR:?} ansible_ssh_user=ansible ansible_ssh_pass=password123 >> inventory
 done
