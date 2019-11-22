@@ -42,3 +42,5 @@ do
     IPADDR=`docker inspect host$i  | jq -r ".[0].NetworkSettings.Networks.$dk_net.IPAddress"`
     echo host$i ansible_ssh_host=${IPADDR:?} ansible_ssh_user=ansible ansible_ssh_pass=password123 >> inventory
 done
+wait
+echo "Setup Complete"
