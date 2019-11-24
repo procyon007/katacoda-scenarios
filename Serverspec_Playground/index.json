@@ -15,21 +15,18 @@
     "intro": {
       "text": "intro.md"
     },
-    "finish": {
-      "text": "finish.md"
+    "assets": {
+      "host01": [
+        {
+          "file": "lab_setup.sh",
+          "target": "~/"
+        },
+        {
+          "file": "ansible.cfg",
+          "target": "~/"
+        }
+      ]
     }
-  },
-  "assets": {
-    "host01": [
-      {
-        "file": "setup.sh",
-        "target": "/tmp"
-      },
-      {
-        "file": "ansible.cfg",
-        "target": "/root"
-      }
-    ]
   },
   "environment": {
     "uilayout": "terminal-iframe"
