@@ -19,6 +19,18 @@
       "text": "finish.md"
     }
   },
+  "assets": {
+    "host01": [
+      {
+        "file": "setup.sh",
+        "target": "/tmp"
+      },
+      {
+        "file": "ansible.cfg",
+        "target": "/root"
+      }
+    ]
+  },
   "environment": {
     "uilayout": "terminal-iframe"
   },
