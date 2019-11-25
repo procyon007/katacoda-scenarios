@@ -18,7 +18,7 @@
     "assets": {
       "host01": [
         {
-          "file": "lab_setup.sh",
+          "file": "setup.sh",
           "target": "~/"
         },
         {
