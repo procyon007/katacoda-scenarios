@@ -35,6 +35,7 @@ source /etc/profile.d/rbenv.sh; gem install serverspec rake highline
 #Docker用ネットワーク作成
 docker network create $dk_net
 
+#設定用Dockerコンテナ起動
 for i in 1 2
 do
     docker run -d --security-opt label:disable --net=$dk_net --rm=true --name=host$i $DOCKER_IMAGE /sbin/init
@@ -43,4 +44,5 @@ do
     echo host$i ansible_ssh_host=${IPADDR:?} ansible_ssh_user=ansible ansible_ssh_pass=password123 >> inventory
 done
 wait
-echo "Setup Complete"
+logger  "Setup_Complete"
+
