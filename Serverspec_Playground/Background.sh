@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#セットアップ開始をログに出力
+logger "Setup_Start"
+
+#inventoryファイル生成
+echo "[client:vars]" >>  inventory
+echo "ansible_ssh_user=ansible ansible_ssh_pass=password123" >>  inventory
+echo "[client]" >> inventory
+
+
 #Katacoda用 Dockerイメージを指定
 DOCKER_IMAGE="procyon07/kata_image"
 
@@ -16,6 +25,9 @@ yum -y install git make autoconf curl wget
 yum -y install gcc-c++ glibc-headers openssl-devel readline libyaml-devel readline-devel zlib zlib-devel sqlite-devel bzip2
 yum -y install openssh-clients python ansible
 yum clean all
+
+# inventoryファイルを生成
+
 
 # rubyとbundleをダウンロード
 git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
@@ -41,7 +53,7 @@ do
     docker run -d --security-opt label:disable --net=$dk_net --rm=true --name=host$i $DOCKER_IMAGE /sbin/init
     sleep 10
     IPADDR=`docker inspect host$i  | jq -r ".[0].NetworkSettings.Networks.$dk_net.IPAddress"`
-    echo host$i ansible_ssh_host=${IPADDR:?} ansible_ssh_user=ansible ansible_ssh_pass=password123 >> inventory
+    echo host$i ansible_ssh_host=${IPADDR:?}  >> inventory
 done
 wait
 logger  "Setup_Complete"
