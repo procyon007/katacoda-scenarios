@@ -19,7 +19,8 @@
       "host01": [
         {
           "file": "setup.sh",
-          "target": "~/"
+          "target": "~/",
+          "chmod": "+x"
         },
         {
           "file": "ansible.cfg",

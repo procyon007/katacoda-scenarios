@@ -1,15 +1,12 @@
 #!/bin/bash
-#変数設定
-ansible="/etc/ansible/hosts"
-
-#Setup開始を通知
-echo "環境のセットアップを開始、完了までお待ち下さい"
-
-#ansible setup完了確認
+echo "環境を準備しております。完了まで暫くお待ちください"
 while :
 do
-  if [ -a /etc/ansible/hosts ]; then
-    echo "ansibleのインストール完了"
+  setup_tmp=`tail -1 /var/log/messages | awk -F" " '{print $6}'`
+  if [ "$setup_tmp" = "Setup_Complete" ]; then
+    echo "#########################"
+    echo "環境の準備が完了しました。"
+    echo "#########################"
     break
   fi
 done
