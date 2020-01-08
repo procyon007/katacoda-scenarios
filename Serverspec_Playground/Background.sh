@@ -19,7 +19,7 @@ ruby_ver="2.6.5"
 dk_net="sp_play"
 
 # 必要なパッケージ、Ansibleをインストール
-yum -y update
+#yum -y update
 yum -y install epel-release jq
 yum -y install git make autoconf curl wget
 yum -y install gcc-c++ glibc-headers openssl-devel readline libyaml-devel readline-devel zlib zlib-devel sqlite-devel bzip2
