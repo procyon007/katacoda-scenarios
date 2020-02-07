@@ -1,0 +1,38 @@
+{
+  "title": "Serverspec Playground",
+  "description": "Serverspec Playground(Currently being created)",
+  "difficulty": "Beginner",
+  "time": "60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md",
+        "courseData": "Background.sh",
+        "code": "foreground.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "setup.sh",
+          "target": "~/",
+          "chmod": "+x"
+        },
+        {
+          "file": "ansible.cfg",
+          "target": "~/"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-iframe"
+  },
+  "backend": {
+    "imageid": "centos-vm"
+  }
+}
