@@ -1,4 +1,4 @@
 #!/bin/bash
 
 #セットアップ確認シェルを実行
-sleep 1; wait.sh
+sleep 1; ./setup.sh
