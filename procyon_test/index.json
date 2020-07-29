@@ -21,7 +21,7 @@
     "uilayout": "terminal-iframe"
   },
   "backend": {
-    "imageid": "docker",
+    "imageid": "TBC",
     "port": "80"
   }
 }
