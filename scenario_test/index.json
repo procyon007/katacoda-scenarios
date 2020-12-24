@@ -13,23 +13,13 @@
     ],
     "intro": {
       "text": "intro.md"
-    },
-    "assets": {
-      "host01": [
-        {
-          "file": "setup.sh",
-          "target": "~/",
-          "chmod": "+x"
-        },
-        {
-          "file": "ansible.cfg",
-          "target": "~/"
-        }
-      ]
     }
   },
   "environment": {
-    "uilayout": "terminal-iframe"
+    "hideintro": false,
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Ubuntu.\r\n \u001b[m\r\n"
   },
   "backend": {
     "imageid": "centos-vm"
