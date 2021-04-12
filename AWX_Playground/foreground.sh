@@ -6,7 +6,7 @@ DOCKER_IMAGE="procyon07/kata_image"
 cd $HOME
 
 #AWX公式githubから最新版を取得
-git clone https://github.com/ansible/awx.git -b 17.0.1
+git clone https://github.com/ansible/awx.git -b 16.0.0
 
 #インストーラのディレクトリへ移動
 cd $HOME/awx/installer
