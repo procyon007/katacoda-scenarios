@@ -6,7 +6,7 @@ DOCKER_IMAGE="procyon07/kata_image"
 cd $HOME
 
 #AWX公式githubから最新版を取得
-git clone https://github.com/ansible/awx.git -b 15.0.1 --depth 1
+git clone https://github.com/ansible/awx.git -b 17.0.1 --depth 1
 
 #インストーラのディレクトリへ移動
 cd $HOME/awx/installer
@@ -20,6 +20,8 @@ sudo pip2.7 install requests
 
 #AWXをインストール
 sed -i s/"#project_data_dir"/project_data_dir/g inventory
+sed -i s/"# admin_password"/admin_password/g inventory
+
 sudo ansible-playbook -i inventory install.yml
 
 #sudo docker run -b --net=awxcompose_default --rm=true --name=host1 $DOCKER_IMAGE > /dev/null 2>&1
