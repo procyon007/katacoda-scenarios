@@ -13,7 +13,7 @@ cd $HOME/awx/installer
 
 #必要モジュールを インストール
 sudo pip3 install setuptools
-sudo pip3 install "ansible==2.9.*"
+sudo pip3 install "ansible==2.8.*"
 sudo pip2.7 install docker
 sudo pip2.7 install docker-compose
 sudo pip2.7 install requests
