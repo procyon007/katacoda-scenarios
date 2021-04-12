@@ -12,15 +12,16 @@ git clone https://github.com/ansible/awx.git -b 16.0.0
 cd $HOME/awx/installer
 
 #必要モジュールを インストール
-sudo pip3 install setuptools
-sudo pip3 install "ansible==2.8.*"
-sudo pip3 install docker
-sudo pip3 install docker-compose
-sudo pip3 install requests
+sudo pip install --upgrade pip
+sudo pip install setuptools
+sudo pip install "ansible==2.8.*"
+sudo pip install docker
+sudo pip install docker-compose
+sudo pip install requests
 
 #AWXをインストール
 sed -i s/"#project_data_dir"/project_data_dir/g inventory
-sed -i s/"# admin_password=password"/admin_password=P@ssw0rd/g inventory
+#sed -i s/"# admin_password=password"/admin_password=P@ssw0rd/g inventory
 
 sudo ansible-playbook -i inventory install.yml
 
