@@ -20,7 +20,7 @@ sudo pip2.7 install requests
 
 #AWXをインストール
 sed -i s/"#project_data_dir"/project_data_dir/g inventory
-sed -i s/"# admin_password"/admin_password/g inventory
+sed -i s/"# admin_password=password"/admin_password=P@ssw0rd/g inventory
 
 sudo ansible-playbook -i inventory install.yml
 
